@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THU NGÂN CỬA HÀNG BREADMASTER</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>GIAO DIỆN THU NGÂN</h1>
+    <div class="container">
+        <div class="payment-form">
+            <form id="paymentForm">
+                <label for="employeeName">Thu ngân:</label>
+                <select name="employeeName" id="employeeName" required>
+                    <option value="Nguyen Van A">Nguyễn Văn A</option>
+                    <option value="Tran Thi B">Trần Thị B</option>
+                    <option value="Pham Van C">Phạm Văn C</option>
+                    <option value="Le Thi D">Lê Thị D</option>
+                    <option value="Hoang Van E">Hoàng Văn E</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <br/>
+                <label for="productName">Tên sản phẩm:</label>
+                <select name="productName" id="productName" required>
+                    <option value="banh_mi_trung">Bánh mì trứng</option>
+                    <option value="banh_mi_xuc_xich">Bánh mì xúc xích</option>
+                    <option value="banh_mi_bo">Bánh mì bò</option>
+                    <option value="banh_mi_ruoc">Bánh mì ruốc</option>
+                    <option value="banh_mi_pate">Bánh mì pate</option>
+                    <option value="banh_mi_thit_nguoi">Bánh mì thịt nguội</option>
+                    <option value="banh_mi_heo_quay">Bánh mì heo quay</option>
+                    <option value="banh_mi_cha_lua">Bánh mì chả lụa</option>
+                    <option value="banh_mi_sua_dac">Bánh mì sữa đặc</option>
+                    <option value="banh_mi_xiu_mai">Bánh mì xíu mại</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <br/>
+                <label for="quantity">Số lượng:</label>
+                <input type="number" name="quantity" id="quantity" required/>
+                <br/>
+                <button type="button" onclick="confirmPayment()">Thêm</button>
+                <button type="submit">Xác nhận</button>
+            </form>
+        </div>
+
+        <div class="bill-details">
+            <h2>Chi tiết hóa đơn:</h2>
+            <div id="paymentDetails">
+                <table id="billTable">
+                    <thead>
+                        <tr>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="totalCost">Total Cost: 0 VND</div>
+            </div>
+        </div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>
