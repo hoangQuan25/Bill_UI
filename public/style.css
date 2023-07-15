@@ -71,6 +71,11 @@ button[type="submit"] {
     text-align: center;
 }
 
+.delete-button {
+    background-color: red;
+    color: white;
+}
+
 .bill-details h2 {
     margin-bottom: 10px;
 }
